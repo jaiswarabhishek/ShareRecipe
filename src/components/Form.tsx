@@ -2,11 +2,17 @@ import React from 'react'
 import { useState , useEffect } from 'react'
 import Card from './Card';
 
-
+interface CardProps {
+  id: number;
+  title: string;
+  publishedAt: string;
+  content: string;
+  image: string;
+}
 
 function Form() {
 
-    const [data, setData] = useState([]);
+    const [data, setData] = useState<CardProps[]>([]);
 
     useEffect(()=>{
 
@@ -42,10 +48,10 @@ function Form() {
             data.map((item)=>(
                 <Card
                   key={item?.id}
-                  image = {item?.image}
-                  title = {item?.title}
+                  title={item?.title}
                   publishedAt={item?.publishedAt}
                   content={item?.content}
+                  image={item?.image}
                  />
             )
             )

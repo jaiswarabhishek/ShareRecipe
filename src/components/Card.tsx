@@ -2,7 +2,17 @@ import React from 'react'
 import { format ,parse} from 'date-fns';
 import { useState} from 'react';
 
-function Card({image, title, publishedAt, content}) {
+type CardProps = {
+  image: string;
+  title: string;
+  publishedAt: string;
+  content: string;
+};
+
+
+
+function Card ({image, title, publishedAt, content}: CardProps)
+{
  const data_first = publishedAt.split(' ')[0];
   const data_second = publishedAt.split(' ')[1];
 
