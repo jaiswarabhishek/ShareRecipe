@@ -2,8 +2,9 @@ export {}
 
 declare global {
     interface Recipe{
-        id: number;
+        readonly id: number;
         name: string;
+        description: string;
         ingredients: string[];
         instructions: string[];
         image: string;

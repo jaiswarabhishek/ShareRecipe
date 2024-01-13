@@ -8,13 +8,13 @@
 /* Card.css */
 
 *{
-    /* font-family: monospace; */
+    font-family: monospace;
     /* font-family: Helvetica; */
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     
 }
 
-.cards-container {
+/* .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 25px;
@@ -109,4 +109,4 @@ button:hover {
   .cards-container {
     grid-template-columns: 1fr;
   }
-}
+} */
