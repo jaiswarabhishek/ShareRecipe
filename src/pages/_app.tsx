@@ -1,14 +1,33 @@
 import '@/styles/globals.css';
 
-import type {AppProps} from 'next/app';
+// _app.tsx
+// _app.tsx
+import { AppProps } from 'next/app';
+import { useState, useEffect } from 'react';
+import Preloader from '@/components/Preloaders';
+function MyApp({ Component, pageProps }: AppProps) {
+  const [loading, setLoading] = useState(true);
+  const [showPopup, setShowPopup] = useState(false);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+	  setShowPopup(true);
+    }, 3000); // Simulate a 3-second loading time, replace with your actual data fetching logic
+    return () => clearTimeout(timer);
+  }, []);
 
-
-export default function App({Component, pageProps}: AppProps) {
-
-
-	return <Component {...pageProps} />;
-
-
+  return (
+    <>
+      {loading ? (
+        <Preloader />
+      ) : (
+        <Component {...pageProps} />
+      )}
+    </>
+  );
 }
+
+export default MyApp;
+
 

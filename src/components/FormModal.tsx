@@ -131,7 +131,7 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
                             shadow
                         />
                     </div>
-                    <Button type="submit">Create Recipe</Button>
+                    <Button type="submit">{typeForm} Recipe</Button>
                 </form>
             </Modal.Body>
         </Modal>
