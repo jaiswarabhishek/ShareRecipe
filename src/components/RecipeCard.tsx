@@ -8,7 +8,7 @@ import {
   HiOutlineShare,
   HiOutlineExclamationCircle,
 } from "react-icons/hi"
-import { FiEye } from "react-icons/fi"
+import { FaRegClock } from "react-icons/fa6"
 import { FaRegHeart } from "react-icons/fa"
 import RecipeContext from "@/contexts/recipeContext"
 import FormModal from "./FormModal"
@@ -95,7 +95,7 @@ const RecipeCard: React.FC = () => {
                         style="light"
                         animation="duration-500"
                         arrow={false}
-                        content="0 views"
+                        content="21 min"
                         placement="top"
                       >
                         <motion.div
@@ -106,7 +106,7 @@ const RecipeCard: React.FC = () => {
                             e.stopPropagation()
                           }}
                         >
-                          <FiEye className="w-5 h-5 text-[rgb(63 131 248 / 0.5)] cursor-pointer" />
+                          <FaRegClock className="w-5 h-5 text-[rgb(63 131 248 / 0.5)] cursor-pointer" />
                         </motion.div>
                       </Tooltip>
                     </div>
