@@ -1,10 +1,13 @@
-import { createContext } from 'react';
+import { createContext } from "react"
 
 interface RecipeContextProps {
-    recipeData: Recipe[];
-    setRecipeData: (recipes: Recipe[]) => void;
+  recipeData: Recipe[]
+  setRecipeData: (recipes: Recipe[]) => void
 }
 
-const RecipeContext = createContext<RecipeContextProps>({recipeData: [],setRecipeData: () => {}});
+const RecipeContext = createContext<RecipeContextProps>({
+  recipeData: [],
+  setRecipeData: () => {},
+})
 
-export default RecipeContext;
+export default RecipeContext

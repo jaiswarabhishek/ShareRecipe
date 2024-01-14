@@ -2,11 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
-*{
-    font-family: monospace;
+* {
+  font-family: monospace;
 }
-body{
-    background-color: #f5f5f5;
+body {
+  background-color: #f5f5f5;
 }
-
