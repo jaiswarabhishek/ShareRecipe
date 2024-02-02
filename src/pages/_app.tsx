@@ -72,7 +72,12 @@ function MyApp({ Component, pageProps }: AppProps) {
           }
         />
         <meta property="og:url" content={"https://sharerecipe.vercel.app"} />
-        <meta property="og:image" content={"https://ibb.co/0QS81VP"} />
+        <meta
+          property="og:image"
+          content={
+            "https://res.cloudinary.com/dfutvewou/image/upload/v1706905256/openleaf/ShareRecipe_gtbf13.png"
+          }
+        />
         <meta property="og:image:width" content={"1200"} />
         <meta property="og:image:height" content={"630"} />
         <meta property="og:image:alt" content={"ShareRecipe"} />
@@ -89,7 +94,12 @@ function MyApp({ Component, pageProps }: AppProps) {
             "Unleash your culinary creativity with ShareRecipe - where every recipe is a journey and every dish tells a story."
           }
         />
-        <meta name="twitter:image" content={"https://ibb.co/0QS81VP"} />
+        <meta
+          name="twitter:image"
+          content={
+            "https://res.cloudinary.com/dfutvewou/image/upload/v1706905256/openleaf/ShareRecipe_gtbf13.png"
+          }
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {loading ? (
