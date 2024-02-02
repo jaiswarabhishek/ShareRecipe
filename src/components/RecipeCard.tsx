@@ -50,7 +50,13 @@ const RecipeCard: React.FC = () => {
                       alt="Picture of the author"
                       className="w-full h-[300px] object-cover rounded-lg"
                     />
-                    <div className="flex justify-evenly gap-0 mt-5">
+                    <div
+                      className="flex justify-evenly gap-0 mt-5"
+                      onClick={e => {
+                        e.preventDefault()
+                        e.stopPropagation()
+                      }}
+                    >
                       <Tooltip
                         style="light"
                         animation="duration-500"
@@ -112,7 +118,13 @@ const RecipeCard: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="flex-1 flex flex-col justify-between">
+                  <div
+                    className="flex-1 flex flex-col justify-between"
+                    onClick={e => {
+                      e.preventDefault()
+                      e.stopPropagation()
+                    }}
+                  >
                     <div>
                       <h5 className="text-xl font-bold text-left tracking-tight text-gray-900 dark:text-white">
                         {recipe.name.length > 30

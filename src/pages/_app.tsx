@@ -5,6 +5,33 @@ import { useState, useEffect } from "react"
 import Preloader from "@/components/Preloaders"
 import { AnimatePresence, motion, Spring } from "framer-motion"
 import { useRouter } from "next/router"
+import { Metadata } from "next"
+import Head from "next/head"
+
+export const metadata: Metadata = {
+  title: {
+    default: "ShareRecipe",
+    template: "%s - ShareRecipe",
+  },
+  description:
+    "Unleash your culinary creativity with ShareRecipe - where every recipe is a journey and every dish tells a story.",
+  keywords: ["recipe", "food", "cooking", "cuisine", "culinary"],
+
+  openGraph: {
+    title: "ShareRecipe",
+    description:
+      "Unleash your culinary creativity with ShareRecipe - where every recipe is a journey and every dish tells a story.",
+    url: "https://sharerecipe.vercel.app",
+    images: [
+      {
+        url: "/images/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "ShareRecipe",
+      },
+    ],
+  },
+}
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
@@ -25,6 +52,28 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <Head>
+        <title>{metadata.title.default}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords.join(", ")} />
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta property="og:description" content={metadata.openGraph.description} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta property="og:image:width" content={metadata.openGraph.images[0].width.toString()} />
+        <meta property="og:image:height" content={metadata.openGraph.images[0].height.toString()} />
+        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="ShareRecipe" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@sharerecipe" />
+        <meta name="twitter:creator" content="@sharerecipe" />
+        <meta name="twitter:title" content={metadata.openGraph.title} />
+        <meta name="twitter:description" content={metadata.openGraph.description} />
+        <meta name="twitter:image" content={metadata.openGraph.images[0].url} />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       {loading ? (
         <Preloader />
       ) : (
