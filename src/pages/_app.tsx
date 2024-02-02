@@ -94,11 +94,29 @@ function MyApp({ Component, pageProps }: AppProps) {
             "Unleash your culinary creativity with ShareRecipe - where every recipe is a journey and every dish tells a story."
           }
         />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:domain"
+          content="https://sharerecipe.vercel.app"
+        />
+        <meta
+          property="twitter:url"
+          content="
+  https://sharerecipe.vercel.app
+"
+        />
+        <meta
+          name="twitter:title"
+          content="
+ ShareRecipe
+"
+        />
         <meta
           name="twitter:image"
-          content={
-            "https://res.cloudinary.com/dfutvewou/image/upload/v1706905256/openleaf/ShareRecipe_gtbf13.png"
-          }
+          content="
+https://res.cloudinary.com/dfutvewou/image/upload/v1706905256/openleaf/ShareRecipe_gtbf13.png
+"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
