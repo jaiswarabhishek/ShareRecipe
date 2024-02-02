@@ -53,25 +53,43 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>{metadata.title.default}</title>
-        <meta name="description" content={metadata.description} />
-        <meta name="keywords" content={metadata.keywords.join(", ")} />
-        <meta property="og:title" content={metadata.openGraph.title} />
-        <meta property="og:description" content={metadata.openGraph.description} />
-        <meta property="og:url" content={metadata.openGraph.url} />
-        <meta property="og:image" content={metadata.openGraph.images[0].url} />
-        <meta property="og:image:width" content={metadata.openGraph.images[0].width.toString()} />
-        <meta property="og:image:height" content={metadata.openGraph.images[0].height.toString()} />
-        <meta property="og:image:alt" content={metadata.openGraph.images[0].alt} />
+        <title>ShareRecipe</title>
+        <meta
+          name="description"
+          content={
+            "Unleash your culinary creativity with ShareRecipe - where every recipe is a journey and every dish tells a story."
+          }
+        />
+        <meta
+          name="keywords"
+          content={"recipe, food, cooking, cuisine, culinary"}
+        />
+        <meta property="og:title" content={"ShareRecipe"} />
+        <meta
+          property="og:description"
+          content={
+            "Unleash your culinary creativity with ShareRecipe - where every recipe is a journey and every dish tells a story."
+          }
+        />
+        <meta property="og:url" content={"https://sharerecipe.vercel.app"} />
+        <meta property="og:image" content={"https://ibb.co/0QS81VP"} />
+        <meta property="og:image:width" content={"1200"} />
+        <meta property="og:image:height" content={"630"} />
+        <meta property="og:image:alt" content={"ShareRecipe"} />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:site_name" content="ShareRecipe" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@sharerecipe" />
         <meta name="twitter:creator" content="@sharerecipe" />
-        <meta name="twitter:title" content={metadata.openGraph.title} />
-        <meta name="twitter:description" content={metadata.openGraph.description} />
-        <meta name="twitter:image" content={metadata.openGraph.images[0].url} />
+        <meta name="twitter:title" content={"ShareRecipe"} />
+        <meta
+          name="twitter:description"
+          content={
+            "Unleash your culinary creativity with ShareRecipe - where every recipe is a journey and every dish tells a story."
+          }
+        />
+        <meta name="twitter:image" content={"https://ibb.co/0QS81VP"} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {loading ? (
