@@ -10,5 +10,3 @@ declare global {
         image: string;
     }
 }
-
-declare module "tailwindcss/lib/util/flattenColorPalette";
