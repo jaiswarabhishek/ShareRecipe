@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false)
-        }, 4000) 
+        }, 4000)
         return () => clearTimeout(timer)
     }, [])
 
@@ -51,31 +51,27 @@ function MyApp({ Component, pageProps }: AppProps) {
                 <meta name="twitter:image" content="https://res.cloudinary.com/dfutvewou/image/upload/v1706905256/openleaf/ShareRecipe_gtbf13.png" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-
-            <div className="w-full dark:bg-black bg-[#f5f5f5]  dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative ">
-                <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_100%,black)]"></div>
-                {loading ? (
-                    <Preloader />
-                ) : (
-                    <AnimatePresence mode="wait">
-                        <motion.div key={router.route}>
-                            <motion.div
-                                style={{
-                                    backgroundImage: "linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)",
-                                    position: "fixed",
-                                    width: "100vw",
-                                    zIndex: 1000,
-                                    top: 0,
-                                }}
-                                transition={transitionSpringPhysics}
-                                initial={{ height: "100vh" }}
-                                animate={{ height: "0vh", transition: { delay: 0.2 } }}
-                            />{" "}
-                            <Component {...pageProps} />{" "}
-                        </motion.div>
-                    </AnimatePresence>
-                )}{" "}
-            </div>
+            {loading ? (
+                <Preloader />
+            ) : (
+                <AnimatePresence mode="wait">
+                    <motion.div key={router.route}>
+                        <motion.div
+                            style={{
+                                backgroundImage: "linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)",
+                                position: "fixed",
+                                width: "100vw",
+                                zIndex: 1000,
+                                top: 0,
+                            }}
+                            transition={transitionSpringPhysics}
+                            initial={{ height: "100vh" }}
+                            animate={{ height: "0vh", transition: { delay: 0.2 } }}
+                        />{" "}
+                        <Component {...pageProps} />{" "}
+                    </motion.div>
+                </AnimatePresence>
+            )}{" "}
         </>
     )
 }
