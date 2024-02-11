@@ -5,7 +5,7 @@ export default function Document() {
         <Html lang="en">
             <Head />
 
-            <body className="w-full dark:bg-black bg-[#f5f5f5]  dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative ">
+            <body className="w-full dark:bg-black bg-[#f5f5f5]  dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative">
                 <Main />
 
                 <NextScript />

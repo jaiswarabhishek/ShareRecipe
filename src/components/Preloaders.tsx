@@ -21,6 +21,7 @@ const Preloader: React.FC = () => {
                     <HiOutlineShare className="mr-3 h-10 w-8 font-medium" />
                 </motion.div>
                 <TypewriterEffectSmoothDemo />
+                <h1 className="text-gray-900 font-bold text-2xl sm:hidden"> ShareRecipe</h1>
             </motion.div>
         </>
     )
