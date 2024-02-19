@@ -104,11 +104,11 @@ const RecipeCard: React.FC = () => {
                                         }}
                                     >
                                         <div>
-                                            <h5 className="text-xl font-bold text-left tracking-tight text-gray-900 dark:text-white">
-                                                {recipe.name.length > 30 ? `${recipe.name.slice(0, 24)}...` : recipe.name}
+                                            <h5 className="text-xl font-bold text-left tracking-tight text-gray-900 dark:text-white line-clamp-1">
+                                                {recipe.name}
                                             </h5>
-                                            <p className="text-sm text-left text-gray-500 dark:text-gray-400 mt-2">
-                                                {recipe.description.length > 100 ? `${recipe.description.slice(0, 100)}...` : recipe.description}
+                                            <p className="text-sm text-left text-gray-500 dark:text-gray-400 mt-2 line-clamp-3">
+                                                {recipe.description}
                                             </p>
                                         </div>
                                         <div className="flex justify-between gap-2 mt-2">
